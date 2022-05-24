@@ -1,8 +1,6 @@
 # Django API Server
 
-Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is built with [json web tokens](https://jwt.io).
-
-<br />
+Jobreviewer Application backend server
 
 > Features:
 
@@ -128,7 +126,6 @@ Response:
 ]
 
 ```
-
 
 > Create Candidate - `api/candidate`
 
