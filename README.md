@@ -1,4 +1,3 @@
-
 # Django API Server
 
 Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is built with [json web tokens](https://jwt.io).
@@ -7,56 +6,18 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 > Features:
 
-- `Up-to-date dependencies` 
-- [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
-- Simple, intuitive codebase - can be extended with ease 
-- Django / DRF / SQLite3 - a simple, easy to use backend
 - Authentication with JWT (login, logout, register)
-- Docker, Unitary tests
-
-<br />
-
-## ✨ Quick Start in `Docker`
-
-> Get the code
-
-```bash
-$ git clone https://github.com/app-generator/api-server-django.git
-$ cd api-server-django
-```
-
-> Start the app in Docker
-
-```bash
-$ docker-compose up --build  
-```
-
-The API server will start using the PORT `5000`.
-
-<br />
-
-> **[PRO Version](https://github.com/app-generator/api-server-django-pro)** available: MongoDB persistance, Docker, Unitary Tests, 24/7 LIVE Support via [Discord](https://discord.gg/fZC6hup)
-
-> Can be used with other [React Starters](https://appseed.us/apps/react) for a complete **Full-Stack** experience:
-
-| [React Node JS Berry](https://appseed.us/product/react-node-js-berry-dashboard) | [Full-Stack Material PRO](https://appseed.us/full-stack/react-material-dashboard) | [React Node Datta Able](https://github.com/app-generator/react-datta-able) |
-| --- | --- | --- |
-| [![React Node JS Berry](https://user-images.githubusercontent.com/51070104/124934742-aa392300-e00d-11eb-83bf-28d8b8704ec8.png)](https://appseed.us/product/react-node-js-berry-dashboard) | [![Full-Stack Material PRO](https://user-images.githubusercontent.com/51070104/128878037-50da7a12-787d-455d-933a-30b2957e2896.png)](https://appseed.us/full-stack/react-material-dashboard) | [![React Node Datta Able](https://user-images.githubusercontent.com/51070104/125737710-834a9e6f-c39b-4f3b-a42a-9583ce2ce1da.png)](https://github.com/app-generator/react-datta-able)
-
-<br />
-
-![Django API Server - Open-source Django Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/126252341-6961a681-767b-4aca-a95f-140da5af5f81.png) 
-
-<br />
+- APIs to get candidate details, all candidate, create candidates and update candidates
 
 ## ✨ How to use the code
 
 > **Step #1** -  Clone the sources
 
 ```bash
-$ git clone https://github.com/app-generator/api-server-django.git
-$ cd api-server-django
+$ git clone https://github.com/joetho786/Jobapplication-Reviewer-Backend.git
+$ cd <to directory containing manage.py>
 ```
+
 <br />
 
 > **Step #2** - Create a virtual environment
@@ -84,19 +45,12 @@ $ pip install -r requirements.txt
 > **Step #4** - Start the API server
 
 ```bash
+$ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py runserver
 ```
 
 The API server will start using the default port `8000`.
-
-<br />
-
-## ✨ Tests
-
-```bash 
-$ python manage.py test
-```
 
 <br />
 
@@ -145,7 +99,61 @@ authorization: JWT_TOKEN (returned by Login request)
 }
 ```
 
-<br />
+> **Get Candidates** - `api/candidate`
 
----
-**Django API Server** - provided by AppSeed [App Generator](https://appseed.us)
+```
+GET api/candidate
+Response:
+[
+   {
+        "id": 1,
+        "created_at": "24-05-2022|09:45:23",
+        "name": "XYZ",
+        "education": "Test College",
+        "experience": "",
+        "website": "",
+        "description": "",
+        "email": "<email address>",
+        "phone": "<phone number>",
+        "address": "<address>",
+        "city": "<city>",
+        "state": "<state>",
+        "zipcode": "<zipcode>",
+        "country": "<country>",
+        "projects": "<project details>",
+        "resume": "<resume url>",
+        "updated_at": "2022-05-24T09:49:49.225964Z",
+        "status": "Applied"
+    }
+]
+
+```
+
+
+> Create Candidate - `api/candidate`
+
+```
+POST api/candidate
+Content-Type: application/json
+payload schema:
+{
+        "id": 1,
+        "created_at": "24-05-2022|09:45:23",
+        "name": "XYZ",
+        "education": "Test College",
+        "experience": "",
+        "website": "",
+        "description": "",
+        "email": "<email address>",
+        "phone": "<phone number>",
+        "address": "<address>",
+        "city": "<city>",
+        "state": "<state>",
+        "zipcode": "<zipcode>",
+        "country": "<country>",
+        "projects": "<project details>",
+        "resume": "<resume url>",
+        "updated_at": "2022-05-24T09:49:49.225964Z",
+        "status": "Applied"
+    }
+```
