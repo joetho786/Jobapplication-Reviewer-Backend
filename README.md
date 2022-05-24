@@ -65,7 +65,7 @@ Content-Type: application/json
 {
     "username":"test",
     "password":"pass", 
-    "email":"test@appseed.us"
+    "email":"test@gmail.com"
 }
 ```
 
@@ -79,7 +79,7 @@ Content-Type: application/json
 
 {
     "password":"pass", 
-    "email":"test@appseed.us"
+    "email":"test@gmail.com"
 }
 ```
 
