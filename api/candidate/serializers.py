@@ -19,6 +19,7 @@ class CandidateSerializer(serializers.ModelSerializer):
         instance.resume = validated_data.get('resume', instance.resume)       
         instance.updated_at = datetime.datetime.now()
         instance.status = validated_data.get('status', instance.status)
+        instance.projects = validated_data.get('projects', instance.projects)
         instance.save()
         return instance
     
